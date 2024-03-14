@@ -71,13 +71,6 @@ public class Main
                 shapeList[i] = new Square(random.nextDouble() * 3 + 3);
                 ResizeShape(shapeList, i, random);
                 System.out.println("Area: " + String.format("%.2f", shapeList[i].getArea()));
-                if (shapeList[i] instanceof Square)
-                {
-                    System.out.println("True+++++++++++++++++++++++++++++++++++++++++++++");
-                    Square tempSquare = (Square) shapeList[i];
-                    tempSquare.howToColor();
-                    System.out.println("End square++++++++++++++++++++++++++++++++++++++");
-                }
             }
         }
         //=====================================================
@@ -93,5 +86,12 @@ public class Main
         System.out.println("After resize");
         System.out.println(shapes[index].toString());
         System.out.println("Resize shape ended_____________________________________________________");
+        if (shapes[index] instanceof Square)
+        {
+            System.out.println("True+++++++++++++++++++++++++++++++++++++++++++++");
+            Square tempSquare = (Square) shapes[index];
+            tempSquare.howToColor();
+            System.out.println("End square++++++++++++++++++++++++++++++++++++++");
+        }
     }
 }
